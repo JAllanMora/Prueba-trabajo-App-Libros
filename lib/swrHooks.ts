@@ -4,9 +4,9 @@ function fetcher(url: string) {
   return window.fetch(url).then((res) => res.json());
 }
 
-export function useBooks(initialData = {}) {
+export function useBooks(fallbackData = {}) {
   const { data, error } = useSWR(`/api/books`, fetcher, {
-    ...initialData,
+    ...fallbackData,
   });
   return {
     books: data,

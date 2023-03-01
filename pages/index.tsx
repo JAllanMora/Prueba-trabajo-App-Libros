@@ -21,7 +21,7 @@ export const getServerSideProps = async () => {
 };
 
 const Index = ({  booksServer }) => {
-  const { books, isLoading, isError } = useBooks({ initialData: booksServer });
+  const { books, isLoading, isError } = useBooks({ fallbackData: booksServer });
   const [openModal, setOpenModal] = useState(false);
   if (isLoading) return <div>Loading... <Icon loading name="spinner" /></div>;
   if (isError) return <div>Error...</div>;
