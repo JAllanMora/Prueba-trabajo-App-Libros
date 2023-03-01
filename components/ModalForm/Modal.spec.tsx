@@ -14,10 +14,6 @@ global.fetch = jest.fn(() =>
 );
 
 describe("ModalForm", () => {
-  // reset fetch mock and modal root before each test
-  beforeEach(() => {
-    // fetch.mockClear();
-  });
 
   // test that modal form renders correctly when open prop is true
   test("renders correctly when open", () => {
